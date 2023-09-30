@@ -1,0 +1,69 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 37px;
+  .search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .search_field {
+      width: 256px;
+      height: 38px;
+      background-color: var(--bg-color);
+      border-radius: 8px;
+    }
+
+    .passport {
+      width: 38px;
+      height: 38px;
+      background-color: var(--bg-color);
+      border-radius: 33px;
+    }
+  }
+  .name {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    h2 {
+      font-weight: 100;
+      span {
+        font-weight: 300;
+      }
+    }
+
+    .links {
+      display: flex;
+      align-items: center;
+
+      gap: 18px;
+
+      .first_link {
+        background-color: var(--light-black);
+        height: 38px;
+        width: 140px;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+
+      .link {
+        background-color: var(--bg-color);
+        height: 38px;
+        border-radius: 8px;
+        width: 140px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper {
+    flex-direction: column;
+    gap: 37px;
+
+    .name {
+      flex-direction: column;
+
+      gap: 30px;
+    }
+  }
+}

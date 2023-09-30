@@ -1,0 +1,156 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 16px;
+  position: relative;
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: var(--bg-color);
+    padding-top: 16px;
+    position: relative;
+    border-radius: 4px;
+    border-radius: 8px;
+    grid-column: span 9;
+    overflow: hidden;
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-inline: 16px;
+
+      top: 140px;
+      .left {
+        background-color: var(--dashboard-black);
+        height: 18px;
+        width: 148px;
+        border-radius: 4px;
+      }
+
+      .right {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        .first_link,
+        .second_link {
+          width: 66px;
+          height: 18px;
+          background-color: var(--dashboard-black);
+          border-radius: 4px;
+        }
+
+        .third_link {
+          width: 66px;
+          height: 18px;
+          background-color: var(--dashboard-black);
+          border-radius: 4px;
+          cursor: pointer;
+
+          &:hover {
+            background-color: white;
+          }
+
+          &:hover + .dropdown {
+            transform: scale(1);
+            transition: all 0.4s ease;
+          }
+        }
+
+        .dropdown {
+          background-color: var(--light-black);
+          height: max-content;
+          width: max-content;
+          border-radius: 8px;
+          padding: 14px;
+          padding-inline: 3px;
+          position: absolute;
+          top: 40px;
+          right: 10px;
+          z-index: 999;
+
+          .drop_link_div {
+            padding: 14px;
+            background-color: transparent;
+            cursor: pointer;
+            border-radius: 4px;
+
+            &:hover {
+              background-color: #424852;
+            }
+            &:hover .drop_link {
+              background-color: white;
+            }
+            .drop_link {
+              background-color: var(--bg-color);
+              width: 53px;
+              border-radius: 4px;
+              height: 9px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .monitor {
+    background-color: var(--bg-color);
+    grid-column: span 3;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 34px;
+    padding: 46px;
+    border-radius: 8px;
+    .round_circle {
+      background-color: var(--dashboard-black);
+      height: 140px;
+      width: 140px;
+      border-radius: 100%;
+      cursor: pointer;
+    }
+
+    .button {
+      background-color: var(--white);
+      height: 38px;
+      width: 112px;
+      border-radius: 100px;
+      cursor: pointer;
+      border-radius: 8px;
+    }
+  }
+}
+
+.views {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 16px;
+  .view_one {
+    grid-column: span 4;
+    background-color: var(--bg-color);
+    height: 261px;
+    border-radius: 8px;
+  }
+  .view_two {
+    grid-column: span 8;
+    background-color: var(--bg-color);
+    height: 261px;
+    border-radius: 8px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .wrapper {
+    grid-gap: 16px;
+
+    .container {
+      grid-column: span 12;
+    }
+
+    .monitor {
+      grid-column: span 12;
+    }
+  }
+}

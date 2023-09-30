@@ -1,0 +1,56 @@
+.wrapper {
+  .graph {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scroll-behavior: smooth;
+    overflow-x: scroll;
+    position: relative;
+    top: 50px;
+    .images {
+      width: 200%;
+      height: 200px;
+      .image1 {
+        transform: scale(0.8);
+        width: 100%;
+      }
+      .image2 {
+        position: absolute;
+        transform: scale(0.8);
+        width: 100%;
+        left: 0;
+      }
+    }
+
+    ::-webkit-scrollbar {
+      width: 0.7em;
+      background: transparent;
+    }
+    ::-webkit-scrollbar-thumb,
+    ::-webkit-scrollbar-thumb {
+      background: transparent;
+      height: 1px;
+    }
+
+    ::-webkit-scrollbar-track-piece {
+      display: none;
+    }
+  }
+  .blocks {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    place-content: center;
+    place-items: center;
+    justify-content: center;
+
+    .block {
+      background-color: var(--dashboard-black);
+      height: 13px;
+      width: 52px;
+      border-radius: 4px;
+      margin-top: 20px;
+
+      color: transparent;
+    }
+  }
+}
