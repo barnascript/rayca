@@ -31,19 +31,19 @@ const Dashboard = ({ onDropContainer, onDragOver, onHandleClick }) => {
                 <div className={styles.dropdown}>
                   <div
                     className={styles.drop_link_div}
-                    onClick={() => setShowDropdown(!showDropDown)}
+                    onClick={toggleDropDown}
                   >
                     <div className={styles.drop_link}></div>
                   </div>
                   <div
                     className={styles.drop_link_div}
-                    onClick={() => setShowDropdown(!showDropDown)}
+                    onClick={toggleDropDown}
                   >
                     <div className={styles.drop_link}></div>
                   </div>
                   <div
                     className={styles.drop_link_div}
-                    onClick={() => setShowDropdown(!showDropDown)}
+                    onClick={toggleDropDown}
                   >
                     <div className={styles.drop_link}></div>
                   </div>

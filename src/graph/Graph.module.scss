@@ -8,15 +8,16 @@
     position: relative;
     top: 50px;
     .images {
-      width: 200%;
+      width: 300%;
       height: 200px;
+
       .image1 {
-        transform: scale(0.8);
+        transform: scale(1);
         width: 100%;
       }
       .image2 {
         position: absolute;
-        transform: scale(0.8);
+        transform: scale(1);
         width: 100%;
         left: 0;
       }

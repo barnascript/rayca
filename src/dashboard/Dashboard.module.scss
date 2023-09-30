@@ -39,12 +39,16 @@
           height: 18px;
           background-color: var(--dashboard-black);
           border-radius: 4px;
+
+          &:hover {
+            background-color: white;
+          }
         }
 
         .third_link {
           width: 66px;
           height: 18px;
-          background-color: var(--dashboard-black);
+          background-color: white;
           border-radius: 4px;
           cursor: pointer;
 
